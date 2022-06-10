@@ -1,6 +1,6 @@
 [![Curso de React con Typescript](banner.jpg)](https://www.youtube.com/watch?v=MfbZd8lhlEo&list=PL5sOO-cTNRUVBoyh-7UIzSYTswoIGtdIo&ab_channel=FrontendAcademy)
 
-# Curso de React con Typescript en español 2022
+# Curso de React con Typescript en Español 2022
 Repositorio del curso de Youtube sobre Curso de React con Typescript en Español.
 
 
