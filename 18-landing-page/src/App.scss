@@ -1,0 +1,55 @@
+#app{
+  #banner{
+    font-family: "Helvetica Neue";
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.42;
+    font-weight: 400;
+    letter-spacing: -.016em;
+    a{
+      text-decoration: none;
+    }
+  }
+  #header-seccion{
+    background-color: rgb(246,245,247);
+    font-family: "Helvetica Neue";
+    font-size: 41px;
+    line-height: 1.08349;
+    font-weight: 600;
+    letter-spacing: -.003em;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 56px;
+    padding-bottom: 56px;
+
+    .header{
+      color: #1d1d1f;
+    }
+    .sub-header{
+      color: #6e6e73;
+    }
+
+
+  }
+  #card-products{
+    background-color: rgb(246,245,247);
+    padding-left: 15%;
+    padding-top: 46px;
+    padding-bottom: 46px;
+    .col{
+      max-width: 200px;
+      img{
+        max-width: 120px;
+      }
+      .title{
+        text-align: center;
+        font-family: "Helvetica Neue";
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1.42859;
+        padding-top: 7px;
+      }
+    }
+  }
+}

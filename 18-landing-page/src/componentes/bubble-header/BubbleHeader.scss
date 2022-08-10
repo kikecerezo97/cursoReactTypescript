@@ -1,0 +1,18 @@
+#bubble-header{
+    margin-top: 10px;
+    img{
+      max-height: 40px;
+    }
+    .h5{
+      font-size: 13px;
+      a{
+        font-family: "Helvetica Neue";
+        text-decoration: none;
+        color: #06c;
+        font-size: 12px;
+        .bi-chevron-right{
+          font-size: 8px;
+        }
+      }
+    }
+}
