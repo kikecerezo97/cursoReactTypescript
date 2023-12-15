@@ -1,8 +1,10 @@
-interface HomeProps {
+interface CrearUsuarioProps {
 
 }
 
-export const Home: React.FC<HomeProps> = ({}: HomeProps) => {
+export const CrearUsuario: React.FC<CrearUsuarioProps> = ({}: CrearUsuarioProps) => {
 
-    
+    return <>
+  
+    </>;
 }
