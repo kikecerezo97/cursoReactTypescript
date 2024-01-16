@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import Table from "react-bootstrap/esm/Table";
 import * as goResService from '../../services/GoRestService';
 import { Usuario } from "../../models/Usuario";
-import { CrearUsuario } from "../../components/CrearUsuario";
+import { CrearUsuario } from "../../components/CrearUsuario/CrearUsuario";
+import { Link } from "react-router-dom";
 
 
 interface HomeProps {
@@ -11,7 +12,7 @@ interface HomeProps {
 
 export const Home: React.FC<HomeProps> = ({}: HomeProps) => {
 
-    const [listUsuarios, setListUsarios] = useState<Usuario[]> ([]);
+    const [listUsuarios, setListUsuarios] = useState<Usuario[]> ([]);
 
     useEffect(()=> {
         getListUsuario()
@@ -21,13 +22,17 @@ export const Home: React.FC<HomeProps> = ({}: HomeProps) => {
     const getListUsuario = async () =>{
 
         const res = await goResService.getUsuarios();
-        setListUsarios(res.data)
+        setListUsuarios(res.data)
         console.log(res.data);
     }
 
     return <>
         <div className="container p-4">
             <h2>Lista de Usuarios</h2>  
+
+            <CrearUsuario returnNewUser={(newUser)=> {
+                setListUsuarios(current => [newUser,...current]);
+            }} />
             <Table striped bordered hover>
                 <thead>
                     <tr>
@@ -36,16 +41,20 @@ export const Home: React.FC<HomeProps> = ({}: HomeProps) => {
                     <th>Email</th>
                     <th>Genero</th>
                     <th>Estatus</th>
+                    <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     {listUsuarios.map((i, index) => (
-                        <tr>
+                        <tr key={index}>
                             <td>{i.id}</td>
                             <td>{i.name}</td>
                             <td>{i.email}</td>
                             <td>{i.gender}</td>
                             <td>{i.status}</td>
+                            <td>
+                                <Link to={"/usuario/" + i.id} className="text-primary">Ver </Link> 
+                            </td>
                         </tr>
                         )
                     )}

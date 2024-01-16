@@ -6,8 +6,7 @@ const API = 'https://gorest.co.in/public/v2/';
 
 
 const headers = {
-    'Content-Type': 'aplication/json',
-    'Authorization': 'Bearer '+ ACCESSTOKEN
+    'Authorization': ACCESSTOKEN
 }
 
 
@@ -15,3 +14,10 @@ export const getUsuarios = async () => {
     return axios.get<Usuario []>(API+ 'users', {headers: headers});
 }
 
+export const postNuevoUsuario = async (nuevoUsuario: Usuario) => {
+    return axios.post<Usuario>(API+ 'users', nuevoUsuario, {headers: headers} )
+}
+
+export const getUsuario = async (idUsuario: number) => {
+    return axios.get<Usuario>(API+'users/'+ idUsuario, {headers: headers});
+}

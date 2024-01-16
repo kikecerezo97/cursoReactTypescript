@@ -1,1 +1,1 @@
-export const ACCESSTOKEN = ''
+export const ACCESSTOKEN = 'Bearer '
