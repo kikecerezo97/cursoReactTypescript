@@ -54,6 +54,8 @@ export const Home: React.FC<HomeProps> = ({}: HomeProps) => {
                             <td>{i.status}</td>
                             <td>
                                 <Link to={"/usuario/" + i.id} className="text-primary">Ver </Link> 
+                                <br/>
+                                <Link to={"/editar/" + i.id} className="text-primary">Editar </Link> 
                             </td>
                         </tr>
                         )

@@ -21,3 +21,7 @@ export const postNuevoUsuario = async (nuevoUsuario: Usuario) => {
 export const getUsuario = async (idUsuario: number) => {
     return axios.get<Usuario>(API+'users/'+ idUsuario, {headers: headers});
 }
+
+export const putUsuario = async (usuario: Usuario) => {
+    return axios.put<Usuario>(API+ 'users/'+ usuario.id , usuario, {headers: headers})
+}
